@@ -14,6 +14,11 @@ export class SongsController {
         return this.songService.create(createSongDTO);
     }
 
+    @Get()
+    findAll(){
+        return this.songService.findAll();
+    }
+
     @Get(':id')
     findOne(@Param('id') id : number){
         return this.songService.findOne(id);
